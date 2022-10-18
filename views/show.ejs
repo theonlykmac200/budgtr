@@ -14,6 +14,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     </head>
     <body>
-      <h1>Selected item</h1>
+        <div class ="container">
+            <h1>Detailed Line Item View</h1>
+            <h2><%= allBudget.name %></h2>
+              <h4>date:</h4>
+                  <h6><%= allBudget.date %></h6>
+              <h4>from:</h4>
+                  <h6><%= allBudget.from %></h6>
+              <h4>amount:</h4>
+                  <h6><%= allBudget.amount %></h6>
+              <h4>tags:</h4>
+                  <h6><%= allBudget.tags %></h6>
+            <button><a href ="/budget">Go Back To Budgtr</a></button>
+        </div>
     </body>
 </html>
