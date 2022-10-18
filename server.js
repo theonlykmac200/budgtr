@@ -6,15 +6,19 @@ app.use(express.urlencoded({extended:false}))
 
 
 app.get("/budgets", (req, res) => {
-    res.send("Hello World")
-})
-
-app.get("/budgets/:index", (req, res) => {
-    res.send("this is the index page")
+    res.render("index.ejs", {
+        allBudget:budget
+    })
 })
 
 app.get("/budgets/new", (req, res) => {
-    res.send("this is the new route")
+    res.render("new.ejs")
+})
+
+app.get("/budgets/:index", (req, res) => {
+    res.render("show.ejs", {
+        allBudget: budget[req.params.id]
+    })
 })
 
 app.post("/budgets/post", (req, res) => {
