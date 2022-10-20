@@ -2,6 +2,8 @@ const express = require("express")
 const budget = require("./models/budget.js")
 const app = express()
 
+app.use(express.static("public"))
+app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 
@@ -21,8 +23,10 @@ app.get("/budget/:index", (req, res) => {
     })
 })
 
-app.post("/budget/post", (req, res) => {
-    res.send("this is the post route")
+app.post("/budget/", (req, res) => {
+    budget.push(req.body)
+    res.redirect("/budget")
+    console.log(req.body)
 })
 
 

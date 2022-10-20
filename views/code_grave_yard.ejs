@@ -1,0 +1,27 @@
+<!-- I tried a few things but I couldn't find where the missing was in my error message on any of them -->
+
+
+<!-- if I had given myself more time I think I could have leveraged this article to find my answer.  https://codesource.io/build-a-budget-app-with-html-css-and-javascript/ -->
+
+<!-- found a reduce method on stack but its not calculating right and I'm out of time.  -->
+<% let bankAccount = allBudget.reduce((expense, allBudget) => {return expense + parseInt(allBudget.amount)}, 0) %>  
+
+<h2> You Currently have $ <%=bankAccount%> in your Budgtr</h2>  
+<!-- // I know I need to turn this into a number in this string using the backticks and JS but couldn't tell if it was some part of the rest of the code or in this string where the error was. -->
+
+<!-- if I figured it out would have styled it like so : -->
+
+<% if (bankAccount > 1000) { %>
+    <style> 
+    h2 {
+        background-color: rgb(172, 242, 195)
+        }
+    </style>
+<% } else if (bankAccount > 0) { %>
+    <style>
+    h2 {
+        background-color: rgb(235, 119, 101)
+        }
+    </style> 
+<% } %>
+

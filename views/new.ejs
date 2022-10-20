@@ -14,6 +14,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     </head>
     <body>
-      <h1>Add A New Line Item</h1>
+     <div class ="container">
+        <h1>Add A New Line Item</h1>
+      <form action="/budget" method="POST">
+        <input type ="text" name ="date" placeholder="date"/>
+        <input type="text" name="name" placeholder="name"/>
+        <input type="text" name="amount" placeholder="amount"/>
+        <input type="text" name="from" placeholder="from"/>
+        <input type="text" name="tags" placeholder="tags"/>
+        <input type="submit" value="new line item"/>
+        
+      </form>
+    </div>
     </body>
 </html>
