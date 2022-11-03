@@ -17,6 +17,25 @@
         
       <div>  
         <h1>Welcome To Your Budgtr</h1>
+          <% let bankAccount = 0 %>
+          <% for (element of allBudget){ 
+            bankAccount = bankAccount + parseInt(element.amount)
+        } %>
+        <% if (bankAccount > 1000) { %>
+          <style> 
+          h2 {
+              background-color: rgb(172, 242, 195)
+              }
+          </style>
+        <% } else if (bankAccount <= 0) { %>
+          <style>
+          h2 {
+              background-color: rgb(235, 119, 101)
+              }
+          </style> 
+      <% } %>
+      
+        <h2> You Currently have $ <%=bankAccount%> in your Budgtr</h2>  
         <table>
             <% for(let i=0; i< allBudget.length; i++) { %>
             <tr>

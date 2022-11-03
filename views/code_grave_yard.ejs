@@ -4,6 +4,14 @@
 <!-- if I had given myself more time I think I could have leveraged this article to find my answer.  https://codesource.io/build-a-budget-app-with-html-css-and-javascript/ -->
 
 <!-- found a reduce method on stack but its not calculating right and I'm out of time.  -->
+//if you have trouble understanding reduce just use a loop to sum up the numbers:
+example
+<% let bankAccount = 0 %>
+<% for (element of allBudget){ 
+  bankAccount = bankAccount + parseInt(element.amount)
+} %>
+
+
 <% let bankAccount = allBudget.reduce((expense, allBudget) => {return expense + parseInt(allBudget.amount)}, 0) %>  
 
 <h2> You Currently have $ <%=bankAccount%> in your Budgtr</h2>  
